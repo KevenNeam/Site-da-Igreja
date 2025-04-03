@@ -1,0 +1,95 @@
+@media screen and (max-width:768px){
+	body{
+	  font-size:14px;
+	 }
+  }
+  @media screen and (max-width:375px){
+	body{
+	  font-size:11px;
+	  }
+  }	
+
+body {
+    font-family: Arial, sans-serif; /* Ou uma fonte serifada, se preferir */
+    line-height: 1.6; /* Espaçamento entre linhas */
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px 0; /* Espaçamento superior e inferior */
+  }
+
+  
+section {
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas de tamanho igual */
+}
+  
+  section img {
+      width: 450px; /* Largura das imagens */
+      height: 450px; /* Altura das imagens */
+      object-fit: cover; /* Ajusta a imagem para caber no espaço, mantendo a proporção */
+      margin-left: 10px; /* Espaçamento entre as imagens */
+      border: 5px solid #605b5b; /* Adiciona uma borda cinza de 5px */
+  }
+    
+main p{
+    width: 80%; /* Largura das seções */
+    max-width: 600px; /* Largura máxima para evitar que fique muito largo */
+    margin-bottom: 20px; /* Espaçamento entre seções */
+    margin-left: 400px;
+    border: 5px solid #605b5b; /* Adiciona uma borda */
+    padding: 20px; /* Espaçamento interno */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Adiciona uma sombra sutil */
+  }
+  
+main p {
+    text-align: justify; /* Justifica o texto */
+  }
+  
+  section strong {
+    font-weight: bold; /* Garante que o texto forte seja negrito */
+  }
+  
+main a {
+    width: 200px;
+    padding: 10px;
+    text-decoration: none; /* Remove sublinhado */
+    color: black ; /* Define a cor do link */
+    margin-bottom: 20px; /* Espaçamento abaixo do link */
+    display: block; /* Torna o link um bloco para melhor espaçamento */
+    border-radius: 5px;
+    margin-left: 600px;
+  }
+
+main a:hover {
+    background-color: #605b5b; /* cinza escuro ao passar o mouse */
+  }
+
+   /* Ajusta o layout para tablets */
+@media screen and (max-width: 1024px) {
+  .links {
+      grid-template-columns: repeat(2, 1fr);
+  }
+  .link-box img {
+      width: 100%;
+      height: auto;
+  }
+}
+
+/* Ajusta o layout para celulares */
+@media screen and (max-width: 768px) {
+  .links {
+      grid-template-columns: 1fr;
+  }
+  .banner {
+      margin-left: 0;
+      padding: 10px;
+  }
+  .link-box a {
+      margin-left: 0;
+      text-align: center;
+  }
+}
+  

@@ -1,0 +1,109 @@
+@media screen and (max-width:768px){
+	body{
+	  font-size:14px;
+	 }
+  }
+  @media screen and (max-width:375px){
+	body{
+	  font-size:11px;
+	  }
+  }	
+
+/* Main container */
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+    
+.pastores {
+    display: flex;
+    justify-content: space-around; /* Distribute pastors evenly */
+    align-items: flex-start; /* Align items to the top */
+    padding: 20px; /* Add padding around the container */
+  }
+  
+  /* Individual pastor sections */
+  .pastor {
+    text-align: center; /* Center text within each section */
+    width: 300px; /* Adjust width as needed */
+    margin: 10px; /* Add spacing between sections */
+  }
+  
+  /* Images */
+  .pastor img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Make images circular */
+    margin-bottom: 10px; /* Add space below the image */
+  }
+  
+  /* Headings */
+  .pastor h2 {
+    /* Para o nome do pastor */
+    border: 5px solid #605b5b; /* 5px de largura, sólida, cor cinza */
+    padding: 5px; /* Adiciona espaço interno para evitar que o texto toque a borda */
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+  }
+  
+  /* Paragraphs */
+  .pastor p {
+    /* Para a descrição */
+    border: 5px solid #605b5b;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1em;
+    line-height: 1.5; /* Adjust line spacing */
+  }
+  
+  /* Link Styling (Optional) */
+  a {
+    display: block; /* Make the link a block element */
+    margin-top: 20px; /* Add space above the link */
+    text-align: center; /* Center the link */
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Set link color */
+  }
+
+  main a{
+    width: 200px;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 640px;
+  }
+
+  main a:hover {
+    background-color: #605b5b; /* cinza escuro ao passar o mouse */
+    
+}
+
+ /* Ajusta o layout para tablets */
+ @media screen and (max-width: 1024px) {
+  .links {
+      grid-template-columns: repeat(2, 1fr);
+  }
+  .link-box img {
+      width: 100%;
+      height: auto;
+  }
+}
+
+/* Ajusta o layout para celulares */
+@media screen and (max-width: 768px) {
+  .links {
+      grid-template-columns: 1fr;
+  }
+  .banner {
+      margin-left: 0;
+      padding: 10px;
+  }
+  .link-box a {
+      margin-left: 0;
+      text-align: center;
+  }
+}
+  

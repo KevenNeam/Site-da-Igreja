@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotos da Arrecadação de Doações</title>
+    <link rel="stylesheet" href="pagina5.css">
+</head>
+<body>
+
+    <header>
+        <h1>Arrecadação de Doações</h1>
+        <figure>
+            <img src="arrecadações igreja.jpg" alt="Arrecadação na igreja" style="max-width: 100%; height: auto;">
+        </figure>
+    </header>
+
+    <main>
+        <section>
+            <p>Nós, da Igreja de Cristo Jesus, acreditamos no poder transformador da fé e na importância de construirmos juntos uma comunidade forte e acolhedora. Para continuarmos nosso trabalho de evangelização, assistência social e desenvolvimento comunitário, precisamos da sua ajuda.</p>
+            <p>Sua contribuição faz a diferença! A arrecadação de doações é essencial para o desenvolvimento de nossas atividades e missões. Participe e abençoe vidas!</p>
+        </section>
+
+        <section id="simulacao-pagamento">
+            <h2>Faça sua doação!</h2>
+            <form id="form-doacao">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+        
+                <label for="valor">Valor (R$):</label>
+                <input type="number" id="valor" name="valor" min="1" required>
+        
+                <fieldset class="metodo-pagamento">
+                    <legend>Método de Pagamento:</legend>
+                    <label><input type="radio" id="pix" name="metodo-pagamento" value="pix" checked> Pix</label>
+                    <label><input type="radio" id="cartao" name="metodo-pagamento" value="cartao"> Cartão de Crédito</label>
+                </fieldset>
+        
+                <button type="submit">Simular Pagamento</button>
+            </form>
+            <div id="mensagem-pagamento"></div>   
+        </section>
+        
+        <a href="index.html">Voltar para a página inicial</a>
+        
+        <script>
+            document.getElementById("form-doacao").addEventListener("submit", function(event) {
+                event.preventDefault();
+        
+                var nome = document.getElementById("nome").value.trim();
+                var valor = document.getElementById("valor").value;
+                var metodoPagamento = document.querySelector('input[name="metodo-pagamento"]:checked').value;
+                var mensagemContainer = document.getElementById("mensagem-pagamento");
+        
+                if (!nome || valor <= 0) {
+                    mensagemContainer.innerHTML = "<p style='color: red;'>Por favor, preencha todos os campos corretamente.</p>";
+                    return;
+                }
+        
+                var mensagem = `<p style="color: green;">Obrigado, <strong>${nome}</strong>! Sua doação de <strong>R$${valor}</strong> foi simulada com sucesso!`;
+                mensagem += metodoPagamento === "pix" ? " através do <strong>Pix</strong>.</p>" : " através do <strong>Cartão de Crédito</strong>.</p>";
+        
+                mensagemContainer.innerHTML = mensagem;
+            });
+        </script>
+        
+        <style>
+            #simulacao-pagamento {
+                max-width: 400px;
+                margin: auto;
+                font-family: Arial, sans-serif;
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+            input, button {
+                padding: 8px;
+                font-size: 16px;
+            }
+            fieldset {
+                border: 1px solid #ccc;
+                padding: 10px;
+                border-radius: 5px;
+            }
+            button {
+                background-color: #28a745;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+            button:hover {
+                background-color: #218838;
+            }
+        </style>
+        
+
+</body>
+</html>
