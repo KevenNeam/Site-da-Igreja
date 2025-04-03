@@ -1,0 +1,129 @@
+
+
+/* Responsividade para tablets e telas menores */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    main {
+        max-width: 90%; /* Reduz a largura para telas menores */
+        padding: 15px;
+    }
+    input, button {
+        width: 100%; /* Faz os campos ocuparem toda a largura */
+    }
+}
+
+/* Responsividade para celulares pequenos */
+@media screen and (max-width: 375px) {
+    body {
+        font-size: 11px;
+    }
+    main {
+        padding: 5px;
+    }
+    h1 {
+        font-size: 14px;
+    }
+}
+
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
+}
+
+header {
+    background-color: white;
+    color: black;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header img {
+    max-width: 200px;
+    margin-top: 10px;
+}
+
+.banner {
+    padding: 20px;
+    margin-left: 70px;
+    text-align: center;
+}
+
+.banner p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.banner strong {
+    font-weight: bold;
+}
+
+.links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas de tamanho igual */
+}
+
+.link-box {
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+}
+
+.link-box img {
+    width: 450px; /* A imagem ocupa toda a largura da coluna */
+    height: 500px; /* Limita a altura máxima */
+    object-fit: cover; /* Ajusta a imagem para cobrir todo o espaço */
+    border-radius: 5px;
+    border: 5px solid #605b5b;
+   
+}
+
+.link-box a {
+    width: 200px;
+    padding: 10px;
+    text-decoration: none; /* Remove sublinhado */
+    color: black ; /* Define a cor do link */
+    margin-bottom: 20px; /* Espaçamento abaixo do link */
+    display: block; /* Torna o link um bloco para melhor espaçamento */
+    border-radius: 5px;
+    margin-left: 125px;
+  }
+
+.link-box a:hover {
+    background-color: #605b5b; /* cinza escuro ao passar o mouse */
+  }
+
+  /* Ajusta o layout para tablets */
+@media screen and (max-width: 1024px) {
+    .links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .link-box img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Ajusta o layout para celulares */
+@media screen and (max-width: 768px) {
+    .links {
+        grid-template-columns: 1fr;
+    }
+    .banner {
+        margin-left: 0;
+        padding: 10px;
+    }
+    .link-box a {
+        margin-left: 0;
+        text-align: center;
+    }
+}
